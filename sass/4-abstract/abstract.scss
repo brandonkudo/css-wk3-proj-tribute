@@ -1,0 +1,11 @@
+@mixin article-text($color) {
+  color: $color;
+  font-size: 16px;
+  font-family: $georgia;
+}
+
+@mixin column-header($color) {
+  color: $color;
+  font-size: 40px;
+  font-size: $georgia;
+}

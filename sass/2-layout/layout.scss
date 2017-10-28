@@ -1,0 +1,135 @@
+body {
+  background-color: #dcdddb;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$boxes-layout: (
+  columns: 3,
+  // gutter: 10px,
+);
+
+$columns-layout: (
+  columns: 2,
+);
+
+
+nav {
+  height: 10vh;
+  width: 100%;
+  background-color: $gray-dk;
+  color: white;
+  font-family: $helvetica;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $lucida-grande;
+}
+
+.caption {
+  background-color: $yellow-lt;
+  color: $orange;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.boxes-container {
+  @include grid-container;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  @include grid-column(3, $boxes-layout);
+  background-image: url("../img/corn1.jpg");
+  background-size: cover;
+  border: 1px solid $gray-lt;
+  border-radius: 3px;
+  margin: 5px auto;
+  min-height: 250px;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  @media screen and (min-width: $break-lg) {
+    @include grid-column (1, $boxes-layout);
+    width: 30vw;
+  }
+}
+
+.box-text {
+  width: 100%;
+  background-color: rgba(67, 64, 64, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: $georgia;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.sections {
+  @include grid-container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.articles {
+  @include grid-column(2, $columns-layout);
+  background-color: white;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid $gray-lt;
+  @media screen and (min-width: $break-lg) {
+    @include grid-column(1, $columns-layout);
+  }
+}
+
+.interests {
+  @include grid-column(2, $columns-layout);
+  background-color: white;
+  text-align: center;
+  border: 1px solid $gray-lt;
+  border-radius: 3px;
+  @media screen and (min-width: $break-lg) {
+    @include grid-column(1, $columns-layout);
+  }
+}
+
+.gallery-wrapper {
+  @include grid-container;
+}
+
+.gallery-column-1 {
+  @include grid-column(2, $columns-layout);
+  @media screen and (min-width: $break-lg) {
+    @include grid-column(1, $columns-layout);
+  }
+}
+
+.gallery-column-2 {
+  @include grid-column(2, $columns-layout);
+  @media screen and (min-width: $break-lg) {
+    @include grid-column(1, $columns-layout);
+  }
+}

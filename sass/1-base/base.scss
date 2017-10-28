@@ -1,0 +1,44 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+@import "../4-abstract/abstract";
+
+$green-lt: #2dcc0a;
+$green-dk: #27a301;
+$gray-lt: #dcdddb;
+$gray-dk: #585859;
+$yellow-lt: #fbfcb5;
+$orange: #f2bc29;
+$green: #2dcc0a;
+$blue: #30a5c9;
+
+$break-sm: 500px;
+$break-lg: 768px;
+
+.box-title {
+  font-size: 16px;
+}
+
+#hero-text {
+  font-size: 50px;
+}
+
+.blue-text {
+  @include article-text($blue);
+}
+
+.blue-text:hover {
+  color: $orange;
+  cursor: pointer;
+}
+
+.column-title {
+  @include column-header($gray-dk);
+}
+
+.gallery-item {
+  width: 200px;
+  margin-bottom: 10px;
+}
